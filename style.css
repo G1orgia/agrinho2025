@@ -1,0 +1,232 @@
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Um tom de cinza claro para o fundo */
+    color: #333;
+}
+
+/* Cabeçalho Principal */
+.cabecalho {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1500x400/28a745/ffffff?text=AGRINHO+2025'); /* Imagem de fundo verde escuro e texto branco */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 80px 20px;
+    animation: fadeIn 1s ease-out;
+}
+
+.cabecalho h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.cabecalho h3 {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #ffd700; /* Um amarelo dourado para o subtítulo */
+}
+
+/* Animação para o cabeçalho */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Barra de Navegação */
+.navbar {
+    border-bottom: 3px solid #28a745; /* Linha verde abaixo do nav */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+    font-weight: bold;
+    color: #fff !important; /* Branco para os links */
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #28a745 !important; /* Verde ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+/* Estilos de Seção */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #eee;
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+section h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: #28a745; /* Verde para os títulos de seção */
+    text-align: center; /* Centraliza os títulos */
+}
+
+/* Estilos para os Cards das Colunas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px; /* Bordas levemente arredondadas */
+}
+
+.card:hover.transform-on-hover {
+    transform: translateY(-10px); /* Move o card para cima no hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra mais forte no hover */
+}
+
+.card-title {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.card-text {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* Emojis */
+.display-4 {
+    font-size: 4rem; /* Garante que o emoji seja grande */
+    line-height: 1; /* Ajusta o espaçamento da linha */
+}
+
+/* Alinhamento de Parágrafos */
+p.lead {
+    font-size: 1.3rem;
+    line-height: 1.8;
+}
+
+p.text-dark {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    text-align: justify; /* Justifica o texto para melhor leitura */
+}
+
+
+/* Rodapé */
+.footer {
+    background-color: #212529; /* Cor escura para o rodapé */
+    color: #adb5bd; /* Tom de cinza para o texto do rodapé */
+    padding: 30px 20px;
+    font-size: 0.9rem;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.footer p {
+    margin-bottom: 5px;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .cabecalho h1 {
+        font-size: 2.5rem;
+    }
+
+    .cabecalho h3 {
+        font-size: 1.5rem;
+    }
+
+    section h2 {
+        font-size: 2rem;
+    }
+
+    /* Colunas em linha única em telas menores */
+    .row-cols-md-3 > .col {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 60px 15px;
+    }
+
+    .cabecalho h1 {
+        font-size: 2rem;
+    }
+
+    .cabecalho h3 {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 15px;
+        text-align: center;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    p.lead {
+        font-size: 1.1rem;
+    }
+
+    p.text-dark {
+        font-size: 1rem;
+    }
+}
+/* Estilos para Imagens de Conteúdo */
+.img-content {
+    max-width: 40%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Remove espaços extras abaixo da imagem */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para destacar */
+    transition: transform 0.5s ease-in-out; /* Transição para a animação */
+}
+
+/* Animação leve ao passar o mouse */
+.img-content:hover {
+    transform: scale(1.02); /* Aumenta a imagem em 2% ao passar o mouse */
+}
+/* Estilos para o Bloco com Botão para Site Externo - Tema Zona Rural (Cores Cinza) */
+/* Se a seção tiver um background, o CSS deve ser aplicado nela, não no botão */
+
+#saiba-mais-rural {
+    background-color: #495057; /* Um cinza escuro para o fundo do bloco */
+    color: white; /* Cor do texto branca */
+}
+
+.rural-button {
+    border-radius: 50px; /* Botão arredondado (pílula) */
+    padding: 15px 30px; /* Aumenta o padding para um botão mais proeminente */
+    font-weight: bold; /* Texto em negrito */
+    font-size: 1.1rem; /* Tamanho da fonte um pouco maior */
+    transition: all 0.3s ease; /* Transição suave para efeitos de hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
+
+    /* Cores do botão para o tema cinza */
+    background-color: #f8f9fa; /* Fundo do botão branco/cinza claro */
+    color: #343a40 !important; /* Cor do texto do botão em cinza escuro */
+    border: 1px solid #dee2e6; /* Borda sutil no botão */
+}
+
+.rural-button:hover {
+    background-color: #e2e6ea; /* Fundo levemente mais escuro no hover */
+    color: #212529 !important; /* Texto do botão ainda mais escuro no hover */
+    transform: translateY(-3px); /* Animação: levanta o botão no hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais intensa no hover */
+}
+
+.rural-button:active {
+    transform: translateY(0); /* Botão "afunda" um pouco quando clicado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra reduzida quando clicado */
+}
